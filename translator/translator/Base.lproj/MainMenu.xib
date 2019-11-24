@@ -11,9 +11,15 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="translator" customModuleProvider="target">
             <connections>
+                <outlet property="clearBtn" destination="qaJ-pz-8Hg" id="PgE-eC-34g"/>
+                <outlet property="fromLanguage" destination="1No-Co-AEy" id="P6D-BN-RoG"/>
+                <outlet property="fromTextView" destination="Deg-dI-RuV" id="LLP-Za-yl5"/>
+                <outlet property="swapBtn" destination="n98-jX-XkZ" id="1hS-HE-o0a"/>
+                <outlet property="toLanguage" destination="Jsc-8z-jww" id="Ogv-ZG-lUU"/>
+                <outlet property="toTextView" destination="9Y7-VR-aNc" id="XHp-7r-UlU"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -699,8 +705,11 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="onSwap:" target="Voe-Tx-rLC" id="IpV-6u-93d"/>
+                        </connections>
                     </button>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qaJ-pz-8Hg" userLabel="crossBtn">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qaJ-pz-8Hg" userLabel="clearBtn">
                         <rect key="frame" x="229" y="299" width="22" height="23"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="Rmj-ki-W0T"/>
@@ -710,6 +719,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="onClear:" target="Voe-Tx-rLC" id="Jip-dg-UtM"/>
+                        </connections>
                     </button>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1No-Co-AEy" userLabel="fromLanguage">
                         <rect key="frame" x="6" y="328" width="218" height="25"/>
@@ -728,7 +740,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="213" height="315"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="Deg-dI-RuV">
+                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="Deg-dI-RuV" userLabel="fromTextView">
                                     <rect key="frame" x="0.0" y="0.0" width="213" height="315"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -766,7 +778,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="213" height="315"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="9Y7-VR-aNc">
+                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="9Y7-VR-aNc" userLabel="toTextView">
                                     <rect key="frame" x="0.0" y="0.0" width="213" height="315"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
